@@ -5,6 +5,6 @@ def convert(s):
     return ' '.join(captialized_words)
 
 def c(word):
-    return word[0].upper()+word[1:].lower().,
+    return word[0].upper()+word[1:].lower()
 s=input()
 print(convert(s))
