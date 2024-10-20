@@ -16,6 +16,19 @@ def countSubArrays(nums,sum):
     
     return c
 
+def prefixSum(nums,target):
+    sumMap={}
+    curSum=0
+    for i in range(len(nums)):
+        curSum+=nums[i]
+        if curSum==target:
+            print(nums[:i+1])
+        if curSum-target in sumMap:
+            startIndex=sumMap[curSum-target]+1
+            print(nums[startIndex:i])
+        sumMap[curSum]=i
+
 nums=[3, 4, -7, 1, 3, 3, 1, 4]
 sum=7
 print(countSubArrays(nums,sum))
+prefixSum(nums,sum)
