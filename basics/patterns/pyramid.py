@@ -20,3 +20,21 @@ for i in range(0,n):
         x+=1
     x=65
     print("\r")
+
+def printnum(n):
+    for i in range(1,n+1):
+        print(" "*(n-i),end=" ")
+        for j in range(1,i+1):
+            print(j,end=" ")
+
+        print("\r")
+
+printnum(5)
+
+def printnormal(n):
+    for i in range(1,n+1):
+        print(" "*(n-i),end=" ")
+        for j in range(1,i+1):
+            print("*",end=" ")
+        print("\r")
+printnormal(5)
