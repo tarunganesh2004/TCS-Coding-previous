@@ -22,3 +22,41 @@
 # s='10101'
 # n=int(s,2)
 # print(n)
+
+# print(ord('a'))
+
+# from itertools import permutations,combinations,product
+# l=[1,2,3]
+# p=list(permutations(l,2))
+# print(p)
+
+# c=list(combinations(l,2))
+# print(c)
+
+# p=list(product(l,repeat=2))
+# print(p)
+
+
+# from collections import Counter,defaultdict
+
+# c=Counter("hello")
+# print(c)
+
+# dd=defaultdict(int)
+# dd['a']+=1
+# print(dd)
+
+# import heapq
+
+# heap=[]
+# heapq.heappush(heap,10)
+# heapq.heappush(heap,20)
+# heapq.heappush(heap,5)
+
+# print(heapq.heappop(heap))
+# print(heapq.nlargest(2,heap)) # [20,10]
+
+# import math
+# print(math.gcd(15,5))
+# print(math.lcm(15,5))
+# print(math.factorial(5))
