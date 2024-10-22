@@ -9,11 +9,11 @@ def kthLargest(n,k):
             f.append(i)
     
     if k>len(f):
-        return None
+        return 1
     return f[-k]
 
-n=10
-k=2
+n=30
+k=9
 print(kthLargest(n,k))
     
 # def kthLargestOptimized(n,k):
@@ -33,3 +33,14 @@ print(kthLargest(n,k))
 #     if k>len(f):
 #         return None
 #     return f[-k]
+
+def another_way(n,k):
+    c=0
+    for i in range(n,0,-1):
+        if n%i==0:
+            c+=1
+            if c==k:
+                return i
+    return 1
+
+print(another_way(n,k))
