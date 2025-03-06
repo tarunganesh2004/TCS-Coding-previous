@@ -20,7 +20,7 @@
 # print(m)
 
 n=int(input())
-l=list(map(int,input().split()))
+l=list(map(int,input().split()))  # noqa: E741
 
 length=len(l)
 
