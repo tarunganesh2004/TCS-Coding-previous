@@ -11,10 +11,25 @@ class inputArray{
         for (int i = 0; i < parts.length; i++) {
             arr[i] = Integer.parseInt(parts[i]); // parse each element to integer
         }
-        
+
         for (int num : arr) {
             System.out.print(num + " ");
         }
         sc.close();
+        Scanner sc2=new Scanner(System.in);
+        anotherWay(sc2);
+    }
+    
+    // case -2 : 1 2 3 4 5
+    public static void anotherWay(Scanner sc) {
+        String[] parts = sc.nextLine().split(" ");
+        int[] arr = new int[parts.length];
+        for (int i = 0; i < parts.length; i++) {
+            arr[i] = Integer.parseInt(parts[i]);
+        }
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
     }
 }
