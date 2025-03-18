@@ -9,24 +9,24 @@ import sys
 # # arr=list(map(int,data[1:n+1]))
 # # print(arr)
 
-# # line by line input
-# s=sys.stdin.readline().strip()
-# n=int(sys.stdin.readline())
-# arr=list(map(int,sys.stdin.readline().split()))
+# line by line input
+s=sys.stdin.readline().strip()
+n=int(sys.stdin.readline())
+arr=list(map(int,sys.stdin.readline().split()))
 
-# print(s)
-# print(n)
-# print(arr)
+print(s)
+print(n)
+print(arr)
 
-# # reading a 2d matrix
-# n,m=map(int,sys.stdin.readline().split())
+# reading a 2d matrix
+n,m=map(int,sys.stdin.readline().split())
 
-# matrix=[list(map(int,sys.stdin.readline().split())) for _ in range(n)]
-# for row in matrix:
-#     print(" ".join(map(str,row)))
+matrix=[list(map(int,sys.stdin.readline().split())) for _ in range(n)]
+for row in matrix:
+    print(" ".join(map(str,row)))
 
-# # for character
-# ch=sys.stdin.read(1)
+# for character
+ch=sys.stdin.read(1)
 
 # handling multiple test cases
 t=int(sys.stdin.readline())
