@@ -86,22 +86,48 @@ class test {
     //         System.out.println();
     //     }
     // }
+    // public static void main(String[] args) throws IOException {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int rows = Integer.parseInt(br.readLine());
+    //     int cols = Integer.parseInt(br.readLine());
+    //     int[][] a = new int[rows][cols];
+    //     for (int i = 0; i < rows; i++) {
+    //         String[] arr = br.readLine().split(" ");
+    //         for (int j = 0; j < cols; j++) {
+    //             a[i][j] = Integer.parseInt(arr[j]);
+    //         }
+    //     }
+    //     for (int i = 0; i < rows; i++) {
+    //         for (int j = 0; j < cols; j++) {
+    //             System.out.print(a[i][j] + " ");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
 public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    int rows = Integer.parseInt(br.readLine());
-    int cols = Integer.parseInt(br.readLine());
-    int[][] a = new int[rows][cols];
-    for (int i = 0; i < rows; i++) {
-        String[] arr = br.readLine().split(" ");
-        for (int j = 0; j < cols; j++) {
-            a[i][j] = Integer.parseInt(arr[j]);
+    List<int[][]> list = new ArrayList<>();
+    int t = Integer.parseInt(br.readLine());
+    while (t-- > 0) {
+        String[] size = br.readLine().split(" ");
+        int rows = Integer.parseInt(size[0]);
+        int cols = Integer.parseInt(size[1]);
+        int[][] a = new int[rows][cols];
+        for (int i = 0; i < a.length; i++) {
+            String[] arr = br.readLine().split(" ");
+            for (int j = 0; j < a[i].length; j++) {
+                a[i][j] = Integer.parseInt(arr[j]);
+            }
         }
+        list.add(a);
     }
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            System.out.print(a[i][j] + " ");
+    for (int[][] a : list) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
         }
-        System.out.println();
     }
 }
 }
