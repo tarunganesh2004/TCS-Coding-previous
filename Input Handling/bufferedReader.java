@@ -60,28 +60,46 @@ class test {
     //     System.out.println(str + " " + c);
     // }
 
+    // public static void main(String[] args) throws IOException {
+    //     // Handling multiple test cases
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int t = Integer.parseInt(br.readLine());
+    //     List<int[]> list = new ArrayList<>();
+    //     while (t-- > 0) {
+    //         // int n = Integer.parseInt(br.readLine());
+    //         String[] arr = br.readLine().split(" ");
+    //         int n=arr.length;
+    //         int[] a = new int[n];
+    //         for (int i = 0; i < n; i++) {
+    //             a[i] = Integer.parseInt(arr[i]);
+    //         }
+    //         // for (int i : a) {
+    //         //     System.out.print(i + " ");
+    //         // }
+    //         list.add(a);
+    //         // System.out.println();
+    //     }
+    //     for (int[] a : list) {
+    //         for (int i : a) {
+    //             System.out.print(i + " ");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
 public static void main(String[] args) throws IOException {
-    // Handling multiple test cases
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    int t = Integer.parseInt(br.readLine());
-    List<int[]> list = new ArrayList<>();
-    while (t-- > 0) {
-        // int n = Integer.parseInt(br.readLine());
+    int rows = Integer.parseInt(br.readLine());
+    int cols = Integer.parseInt(br.readLine());
+    int[][] a = new int[rows][cols];
+    for (int i = 0; i < rows; i++) {
         String[] arr = br.readLine().split(" ");
-        int n=arr.length;
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++) {
-            a[i] = Integer.parseInt(arr[i]);
+        for (int j = 0; j < cols; j++) {
+            a[i][j] = Integer.parseInt(arr[j]);
         }
-        // for (int i : a) {
-        //     System.out.print(i + " ");
-        // }
-        list.add(a);
-        // System.out.println();
     }
-    for (int[] a : list) {
-        for (int i : a) {
-            System.out.print(i + " ");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            System.out.print(a[i][j] + " ");
         }
         System.out.println();
     }
