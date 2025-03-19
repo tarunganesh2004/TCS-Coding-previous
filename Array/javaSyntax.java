@@ -82,3 +82,39 @@ class test {
         System.out.println(maxHeap.isEmpty());
     }
 }
+
+// comparator, sort students by marks
+class Student {
+    String name;
+    int marks;
+
+    public Student(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public String toString() {
+        return this.name + " " + this.marks;
+    }
+    
+
+}
+class StudentComparator implements Comparator<Student> {
+    @Override
+    public int compare(Student s1, Student s2) {
+        return s1.marks - s2.marks;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        PriorityQueue<Student> pq = new PriorityQueue<>(new StudentComparator());
+        pq.offer(new Student("A", 90));
+        pq.offer(new Student("B", 80));
+        pq.offer(new Student("C", 70));
+
+        while (!pq.isEmpty()) {
+            System.out.println(pq.poll());
+        }
+    }
+}
