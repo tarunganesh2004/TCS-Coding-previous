@@ -23,4 +23,15 @@ public class removeAllvowels {
         }
         return res;
     }
+
+    // remove characters from a string except alphabets
+    public static String removeSpecialCharacters(String s) {
+        String res = "";
+        for (char ch : s.toCharArray()) {
+            if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+                res += ch;
+            }
+        }
+        return res;
+    }
 }
