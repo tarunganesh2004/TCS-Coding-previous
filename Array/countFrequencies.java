@@ -5,17 +5,16 @@ class countFrequencies {
         System.out.println(frequencyCount(arr));
     }
 
-    public static  List<Integer> frequencyCount(int[] arr) {
-        List<Integer> ans = new ArrayList<>();
+    public static  List<Integer> frequencyCount(int[] arr) { // 1 to n
         int n = arr.length;
+        int[] freq = new int[n];
         for (int i = 0; i < n; i++) {
-            ans.add(0);
+            freq[arr[i]-1]++;
         }
+        List<Integer> res = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            int j = arr[i];
-            ans.set(j-1,ans.get(j-1)+1); // ans[j-1]++
-
+            res.add(freq[i]);
         }
-        return ans;
+        return res;
     }
 }
